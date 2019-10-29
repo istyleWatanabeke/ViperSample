@@ -25,6 +25,8 @@
 		6083F3B02367FC2200B3B63D /* NSFetchRequestResult+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6083F3AF2367FC2200B3B63D /* NSFetchRequestResult+extension.swift */; };
 		60AF2AD92368058A00E85C01 /* SearchHistory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60AF2AD82368058A00E85C01 /* SearchHistory+CoreDataClass.swift */; };
 		60AF2ADB236805DB00E85C01 /* SearchHistory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60AF2ADA236805DB00E85C01 /* SearchHistory+CoreDataProperties.swift */; };
+		60AF2ADF23681DBB00E85C01 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60AF2ADE23681DBB00E85C01 /* RootRouter.swift */; };
+		60AF2AE123681F3400E85C01 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60AF2AE023681F3400E85C01 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		6083F3AF2367FC2200B3B63D /* NSFetchRequestResult+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSFetchRequestResult+extension.swift"; sourceTree = "<group>"; };
 		60AF2AD82368058A00E85C01 /* SearchHistory+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchHistory+CoreDataClass.swift"; sourceTree = "<group>"; };
 		60AF2ADA236805DB00E85C01 /* SearchHistory+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchHistory+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		60AF2ADE23681DBB00E85C01 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		60AF2AE023681F3400E85C01 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		6083F3492367D87600B3B63D = {
 			isa = PBXGroup;
 			children = (
+				60AF2AE023681F3400E85C01 /* Default-568h@2x.png */,
 				6083F3542367D87600B3B63D /* ViperSample */,
 				6083F36B2367D87B00B3B63D /* ViperSampleTests */,
 				6083F3762367D87B00B3B63D /* ViperSampleUITests */,
@@ -307,6 +312,7 @@
 		6083F3972367E11B00B3B63D /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				60AF2ADE23681DBB00E85C01 /* RootRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -423,6 +429,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6083F3622367D87B00B3B63D /* LaunchScreen.storyboard in Resources */,
+				60AF2AE123681F3400E85C01 /* Default-568h@2x.png in Resources */,
 				6083F35F2367D87B00B3B63D /* Assets.xcassets in Resources */,
 				6083F35D2367D87600B3B63D /* Main.storyboard in Resources */,
 			);
@@ -453,6 +460,7 @@
 				6083F39A2367E9D200B3B63D /* User.swift in Sources */,
 				6083F35A2367D87600B3B63D /* ViewController.swift in Sources */,
 				6083F3AC2367FAE600B3B63D /* SearchRepositoryInteractor.swift in Sources */,
+				60AF2ADF23681DBB00E85C01 /* RootRouter.swift in Sources */,
 				6083F3AE2367FAF700B3B63D /* SearchHistoryInteractor.swift in Sources */,
 				6083F39E2367EA3000B3B63D /* SearchResponse.swift in Sources */,
 				6083F3B02367FC2200B3B63D /* NSFetchRequestResult+extension.swift in Sources */,
