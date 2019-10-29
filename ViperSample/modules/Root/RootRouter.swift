@@ -17,6 +17,10 @@ class RootRouter {
     }
 
     func showFirstView() {
+        let firstView = RepositoryListRouter.assembleModules()
+        let navigationController = UINavigationController(rootViewController: firstView)
 
+        window.rootViewController = navigationController
+        window.makeKeyAndVisible()
     }
 }
