@@ -99,13 +99,12 @@
 		6083F3542367D87600B3B63D /* ViperSample */ = {
 			isa = PBXGroup;
 			children = (
-				6083F3552367D87600B3B63D /* AppDelegate.swift */,
-				6083F3572367D87600B3B63D /* SceneDelegate.swift */,
-				6083F3592367D87600B3B63D /* ViewController.swift */,
-				6083F35B2367D87600B3B63D /* Main.storyboard */,
-				6083F35E2367D87B00B3B63D /* Assets.xcassets */,
-				6083F3602367D87B00B3B63D /* LaunchScreen.storyboard */,
-				6083F3632367D87B00B3B63D /* Info.plist */,
+				6083F3852367DDCD00B3B63D /* application */,
+				6083F3862367DDF900B3B63D /* modules */,
+				6083F3872367DE2800B3B63D /* data */,
+				6083F3882367DE4200B3B63D /* enitities */,
+				6083F3892367DE6000B3B63D /* extensions */,
+				6083F38A2367DE8200B3B63D /* resources */,
 			);
 			path = ViperSample;
 			sourceTree = "<group>";
@@ -126,6 +125,167 @@
 				6083F3792367D87B00B3B63D /* Info.plist */,
 			);
 			path = ViperSampleUITests;
+			sourceTree = "<group>";
+		};
+		6083F3852367DDCD00B3B63D /* application */ = {
+			isa = PBXGroup;
+			children = (
+				6083F3632367D87B00B3B63D /* Info.plist */,
+				6083F3552367D87600B3B63D /* AppDelegate.swift */,
+				6083F3572367D87600B3B63D /* SceneDelegate.swift */,
+				6083F3602367D87B00B3B63D /* LaunchScreen.storyboard */,
+			);
+			path = application;
+			sourceTree = "<group>";
+		};
+		6083F3862367DDF900B3B63D /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				6083F38B2367DFB600B3B63D /* Root */,
+				6083F38E2367E04800B3B63D /* RepositoryList */,
+				6083F38F2367E05F00B3B63D /* RepositoryDetail */,
+			);
+			path = modules;
+			sourceTree = "<group>";
+		};
+		6083F3872367DE2800B3B63D /* data */ = {
+			isa = PBXGroup;
+			children = (
+				6083F38C2367DFF300B3B63D /* Interactor */,
+				6083F38D2367E00300B3B63D /* api */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		6083F3882367DE4200B3B63D /* enitities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = enitities;
+			sourceTree = "<group>";
+		};
+		6083F3892367DE6000B3B63D /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		6083F38A2367DE8200B3B63D /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				6083F35E2367D87B00B3B63D /* Assets.xcassets */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		6083F38B2367DFB600B3B63D /* Root */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		6083F38C2367DFF300B3B63D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				6083F3912367E0AA00B3B63D /* SearchRepository */,
+				6083F3922367E0B500B3B63D /* SearchHistory */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		6083F38D2367E00300B3B63D /* api */ = {
+			isa = PBXGroup;
+			children = (
+				6083F3902367E08E00B3B63D /* GitHubClient */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		6083F38E2367E04800B3B63D /* RepositoryList */ = {
+			isa = PBXGroup;
+			children = (
+				6083F3972367E11B00B3B63D /* Router */,
+				6083F3932367E0E800B3B63D /* View */,
+				6083F3952367E0FB00B3B63D /* Presenter */,
+			);
+			path = RepositoryList;
+			sourceTree = "<group>";
+		};
+		6083F38F2367E05F00B3B63D /* RepositoryDetail */ = {
+			isa = PBXGroup;
+			children = (
+				6083F3982367E12000B3B63D /* Router */,
+				6083F3942367E0F000B3B63D /* View */,
+				6083F3962367E10000B3B63D /* Presenter */,
+			);
+			path = RepositoryDetail;
+			sourceTree = "<group>";
+		};
+		6083F3902367E08E00B3B63D /* GitHubClient */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GitHubClient;
+			sourceTree = "<group>";
+		};
+		6083F3912367E0AA00B3B63D /* SearchRepository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SearchRepository;
+			sourceTree = "<group>";
+		};
+		6083F3922367E0B500B3B63D /* SearchHistory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SearchHistory;
+			sourceTree = "<group>";
+		};
+		6083F3932367E0E800B3B63D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6083F3592367D87600B3B63D /* ViewController.swift */,
+				6083F35B2367D87600B3B63D /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6083F3942367E0F000B3B63D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6083F3952367E0FB00B3B63D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		6083F3962367E10000B3B63D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		6083F3972367E11B00B3B63D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		6083F3982367E12000B3B63D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
