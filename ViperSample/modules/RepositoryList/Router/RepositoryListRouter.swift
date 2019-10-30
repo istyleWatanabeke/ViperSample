@@ -29,13 +29,11 @@ final class RepositoryListRouter {
         let repositoryInteractor = SearchRepositoryInteractor()
         // PresenterはView, Interactor, Routerそれぞれ必要なので
         // 生成し、initの引数で渡す
-//        let presenter = RepositoryListViewPresenter(view: view,
-//                                                    router: router,
-//                                                    historyInteractor: historyInteractor,
-//                                                    repositoryInteractor: repositoryInteractor)
-//
-//        view.presenter = presenter    // ViewにPresenterを設定
-
+        let presenter = RepositoryListViewPresenter(view: view,
+                                                    router: router,
+                                                    historyInteractor: historyInteractor,
+                                                    repositoryInteractor: repositoryInteractor)
+        view.presenter = presenter    // ViewにPresenterを設定
         return view
     }
 }

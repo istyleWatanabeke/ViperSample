@@ -33,7 +33,7 @@ final class RepositoryListViewController: UIViewController {
         let searchBar = UISearchBar()
         searchBar.placeholder = "リポジトリ名を入力..."
 
-//        searchBar.delegate = self
+        searchBar.delegate = self
 
         return searchBar
     }()
@@ -78,3 +78,60 @@ final class RepositoryListViewController: UIViewController {
     }
 }
 
+// Viewのプロトコルに準拠する
+extension RepositoryListViewController: RepositoryListView {
+
+    func setLastSearchText(_ text: String) {
+        searchBar.text = text
+    }
+
+    func showRefreshView() {
+        guard !refreshControl.isRefreshing else { return }
+
+        refreshControl.beginRefreshingManually(in: tableView)
+    }
+
+    func updateRepositories(_ repositories: [Repository]) {
+        self.repositories = repositories
+    }
+
+    func showErrorMessageView(reason: String) {
+        DispatchQueue.main.async {
+            self.errorMessageLabel.text = reason
+            self.errorMessageLabel.isHidden = false
+        }
+    }
+}
+
+extension RepositoryListViewController: UITableViewDelegate, UITableViewDataSource {
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return repositories.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: RepositoryCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.setRepository(repositories[indexPath.row])
+
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.didSelectRow(at: indexPath)
+    }
+}
+
+extension RepositoryListViewController: UISearchBarDelegate {
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let text = searchBar.text else { return }
+
+        presenter.searchButtonDidPush(searchText: text)
+
+        searchBar.resignFirstResponder()
+    }
+}
