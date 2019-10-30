@@ -10,6 +10,11 @@ import UIKit
 
 class RepositoryCell: UITableViewCell {
 
+    @IBOutlet private weak var repositoryNameLabel: UILabel!
+    @IBOutlet private weak var starCoutLabel: UILabel!
 
-    
+    func setRepository(_ repository: Repository) {
+        repositoryNameLabel.text = repository.fullName
+        starCoutLabel.text = "\(repository.starCount)"
+    }
 }
